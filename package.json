@@ -1,0 +1,23 @@
+{
+  "name": "Cypress-Testing-E2E",
+  "version": "1.0.0",
+  "description": "Cypress Testing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elisonliu97/Cypress-Testing-E2E.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elisonliu97/Cypress-Testing-E2E/issues"
+  },
+  "homepage": "https://github.com/elisonliu97/Cypress-Testing-E2E#readme",
+  "dependencies": {
+    "cypress": "^8.4.1"
+  }
+}
