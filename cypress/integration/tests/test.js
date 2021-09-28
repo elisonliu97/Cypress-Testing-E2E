@@ -14,7 +14,7 @@ describe('Create account page tests', () => {
             state: 'Iowa',
             postCode: '10101',
             phoneNumber: '1234567890'
-        }
+        },
     ]
 
     beforeEach(() => {
@@ -32,11 +32,18 @@ describe('Create account page tests', () => {
         loginPortal.enterPostCode(userData[0].postCode);
         loginPortal.enterPhoneNumber(userData[0].phoneNumber);
         loginPortal.submitAccount();
+        loginPortal.getLogoutBtn().should('be.visible');
+    })
+
+    it ('should not be able to create an account using credentials that have already been used', () => {
+        loginPortal.enterEmailCreate(userData[0].email);
+        loginPortal.getCreateAccountError().should('be.visible');
     })
 
     it('should be able to login on a created account given proper credentials', () => {
         loginPortal.enterEmailLogin(userData[0].email);
         loginPortal.enterPasswordLogin(userData[0].password);
         loginPortal.submitLogin();
+        loginPortal.getLogoutBtn().should('be.visible');
     })
 })
