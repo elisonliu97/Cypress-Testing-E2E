@@ -1,0 +1,5 @@
+Title: Terms and Conditions link refers to wrong document.
+Environment: Google Chrome ver 93.0.4577.82 and Mozilla Firefox ver 92.0.1
+Expected: The link brings me to their Terms and Conditions document.
+Result: The link brings me to their privacy document.
+Steps to Reproduce: Click on the link that says "Terms and Conditions"
