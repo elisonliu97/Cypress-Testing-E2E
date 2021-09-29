@@ -3,4 +3,4 @@ Environment: Google Chrome ver 93.0.4577.82 and Mozilla Firefox ver 92.0.1
 Expected: When the user inputs a large enough number, it should give the user either the factorial of the number or infinity.
 Result: The AJAX call returns an internal server error 500 in the console.
 Steps to Reproduce: Input a number greater than 989 and click the calculate button.
-Visual Proof: https://drive.google.com/file/d/12MCuA2oPXEXeuXuRDIxi2epDmBk0_rfP/view
+Visual Proof: https://watch.screencastify.com/v/KkGXT6thc9NKXVAn8J5F
