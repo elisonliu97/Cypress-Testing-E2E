@@ -2,11 +2,11 @@
 
 These are E2E tests built to validate account creation and checkout for [this site](http://automationpractice.com/index.php). They follow the BDD framework and use Cypress as the testing framework. There are also some sample bug reports for [this site](https://qainterview.pythonanywhere.com/) included in the bug report folder.
 
-## Technologies:
+## Technologies
 Javascript <br />
 Cypress <br />
 
-## User Stories: 
+## User Stories
 GIVEN proper credentials <br />
 WHEN a user signs up for an account <br />
 THEN it should create an account and log the user in <br />
@@ -26,3 +26,6 @@ THEN it should display an error message and the login button should still be vis
 GIVEN a logged in account <br />
 WHEN the user tries to complete an order checkout <br />
 THEN the user should get to a page that confirms the order <br />
+
+## Usage
+To run these tests, use command `npm run test` to open up the Cypress UI. From there, choose the test files to run.
