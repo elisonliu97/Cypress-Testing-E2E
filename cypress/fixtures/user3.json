@@ -7,5 +7,18 @@
     "city": "Test City",
     "state": "Alabama",
     "postCode": "11101",
-    "phoneNumber": "2134867890"
+    "phoneNumber": "2134867890",
+    "title": "Mr.",
+    "dob": {
+        "day": "21",
+        "month": "April",
+        "year": "1995"
+    },
+    "newsletter": true,
+    "optin": true,
+    "company": "Test Company",
+    "address2": "8 alt test drive",
+    "other": "This is other stuff",
+    "homePhone": "0987654321",
+    "alias": "test alias"
 }
