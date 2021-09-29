@@ -32,11 +32,13 @@ export class LoginPortal {
     bankwireEl = '.bankwire'
     orderConfirmEl = '.cheque-indent > .dark'
 
+    // from homepage, go to login page
     visitLoginPage() {
         cy.visit('http://automationpractice.com/index.php');
         cy.get(this.loginPagePortalEl).click();
     }
 
+    // account creation helper functions
     enterEmailCreate(email) {
         cy.get(this.signupEmailInputEl).type(email);
         cy.get(this.submitCreateEl).click();
@@ -82,6 +84,31 @@ export class LoginPortal {
         return cy.get(this.createAccountErrorEl)
     }
 
+    // test function to create new account
+    fillCreateAccDetails(userDataFixture) {
+        cy.fixture(userDataFixture).then((data) => {
+            this.enterEmailCreate(data.email);
+            this.enterFirstName(data.firstName);
+            this.enterLastName(data.lastName);
+            this.enterPassword(data.password);
+            this.enterAddress(data.address);
+            this.enterCity(data.city);
+            this.enterState(data.state);
+            this.enterPostCode(data.postCode);
+            this.enterPhoneNumber(data.phoneNumber);
+            this.submitAccount();
+        })
+    }
+
+    // test function to only input email data
+    useExistingAccDetails(userDataFixture) {
+        cy.fixture(userDataFixture).then((data) => {
+            this.enterEmailCreate(data.email)
+        })
+    }
+
+    // portion for login validation
+    // helper functions for validation
     enterEmailLogin(email) {
         cy.get(this.loginEmailEl).type(email);
     }
@@ -98,6 +125,20 @@ export class LoginPortal {
         return cy.get(this.logoutBtnEl)
     }
 
+    getLoginBtn() {
+        return cy.get(this.loginPagePortalEl)
+    }
+
+    fillLoginCreds(userDataFixture) {
+        cy.fixture(userDataFixture).then((data) => {
+            this.visitLoginPage();
+            this.enterEmailLogin(data.email);
+            this.enterPasswordLogin(data.password);
+            this.submitLogin();
+        })
+    }
+
+    // portion for checkout validation
     goToProductSection() {
         cy.get(this.menuEl).click();
     }

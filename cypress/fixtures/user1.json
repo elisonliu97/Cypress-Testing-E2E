@@ -1,0 +1,11 @@
+{
+    "email": "testuser3@email.com",
+    "firstName": "testthree",
+    "lastName": "userthree",
+    "password": "passtestthree",
+    "address": "3 test drive",
+    "city": "Test City",
+    "state": "Iowa",
+    "postCode": "10101",
+    "phoneNumber": "1234567890"
+}
