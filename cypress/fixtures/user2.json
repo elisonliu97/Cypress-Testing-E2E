@@ -1,11 +1,11 @@
 {
-    "email": "testuser4@email.com",
-    "firstName": "testfour",
-    "lastName": "userfour",
-    "password": "passtestfour",
-    "address": "4 test drive",
+    "email": "testuser7@email.com",
+    "firstName": "testseven",
+    "lastName": "userseven",
+    "password": "passtestseven",
+    "address": "7 test drive",
     "city": "Test City",
     "state": "Delaware",
     "postCode": "10111",
-    "phoneNumber": "2345678901"
+    "phoneNumber": "2377778901"
 }
