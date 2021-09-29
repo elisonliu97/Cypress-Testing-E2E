@@ -7,5 +7,12 @@
     "city": "Test City",
     "state": "Delaware",
     "postCode": "10111",
-    "phoneNumber": "2377778901"
+    "phoneNumber": "2377778901",
+    "title": "Mrs.",
+    "dob": {
+        "day": "11",
+        "month": "September",
+        "year": "1991"
+    },
+    "company": "Test Company"
 }
