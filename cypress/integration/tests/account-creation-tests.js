@@ -40,10 +40,5 @@ describe('Create account page tests', () => {
         loginPortal.getCreateAccountError().should('be.visible');
     })
 
-    it('should be able to login on a created account given proper credentials', () => {
-        loginPortal.enterEmailLogin(userData[0].email);
-        loginPortal.enterPasswordLogin(userData[0].password);
-        loginPortal.submitLogin();
-        loginPortal.getLogoutBtn().should('be.visible');
-    })
+
 })

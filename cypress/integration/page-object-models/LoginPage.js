@@ -23,6 +23,15 @@ export class LoginPortal {
     loginEmailEl = '#email';
     loginSubmitEl = '#SubmitLogin';
 
+    // Elements to add a product and checkout;
+    menuEl = '.sf-menu > :nth-child(2) > .sf-with-ul'
+    addToCartBtnEl = ':nth-child(2) > .product-container > .right-block > .button-container > .ajax_add_to_cart_button > span'
+    goToCheckoutEl = '.button-container > .button-medium > span'
+    checkoutBtnEl = '.cart_navigation > .button > span'
+    ToCCheckEl = '#cgv'
+    bankwireEl = '.bankwire'
+    orderConfirmEl = '.cheque-indent > .dark'
+
     visitLoginPage() {
         cy.visit('http://automationpractice.com/index.php');
         cy.get(this.loginPagePortalEl).click();
@@ -88,4 +97,27 @@ export class LoginPortal {
     getLogoutBtn() {
         return cy.get(this.logoutBtnEl)
     }
+
+    goToProductSection() {
+        cy.get(this.menuEl).click();
+    }
+
+    addToCart() {
+        cy.get(this.addToCartBtnEl).click();
+    }
+
+    checkout() {
+        cy.get(this.goToCheckoutEl).click();
+        cy.get(this.checkoutBtnEl).click();
+        cy.get(this.checkoutBtnEl).click();
+        cy.get(this.ToCCheckEl).click();
+        cy.get(this.checkoutBtnEl).click();
+        cy.get(this.bankwireEl).click();
+        cy.get(this.checkoutBtnEl).click();
+    }
+
+    getConfirmOrder() {
+        return cy.get(this.orderConfirmEl)
+    }
+
 }
